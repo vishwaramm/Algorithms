@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CodingProblems
+namespace Algorithms
 {
     public class Solutions
     {

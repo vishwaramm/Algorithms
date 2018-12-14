@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CodingProblems.Tests
+namespace Algorithms.Tests
 {
     [TestClass]
     public class SolutionsTests
@@ -54,7 +54,6 @@ namespace CodingProblems.Tests
              */
 
             string str = "a,b$c";
-            Solutions s = new Solutions();
 
             string result = ReverseArrayWithSpecialCharacters.Solution_ConstantSpace(str.ToCharArray());
 

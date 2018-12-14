@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CodingProblems
+namespace Algorithms
 {
     public static class GetAllPalindromicPartitions
     {

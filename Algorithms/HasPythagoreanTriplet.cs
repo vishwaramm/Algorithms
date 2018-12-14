@@ -1,5 +1,5 @@
 ﻿using System;
-namespace CodingProblems
+namespace Algorithms
 {
     public static class HasPythagoreanTriplet
     {
