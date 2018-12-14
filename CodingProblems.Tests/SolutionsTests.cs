@@ -21,21 +21,20 @@ namespace CodingProblems.Tests
              */
 
             string str = "a,b$c";
-            Solutions s = new Solutions();
 
-            string result = s.ReverseArrayWithSpecialCharacters(str.ToCharArray());
+            string result = ReverseArrayWithSpecialCharacters.Solution(str.ToCharArray());
 
             Assert.AreEqual("c,b$a", result);
 
             str = "Ab,c,de!$";
 
-            result = s.ReverseArrayWithSpecialCharacters(str.ToCharArray());
+            result = ReverseArrayWithSpecialCharacters.Solution(str.ToCharArray());
 
             Assert.AreEqual("ed,c,bA!$", result);
 
             str = "a!!!b.c.d,e'f,ghi";
 
-            result = s.ReverseArrayWithSpecialCharacters(str.ToCharArray());
+            result = ReverseArrayWithSpecialCharacters.Solution(str.ToCharArray());
 
             Assert.AreEqual("i!!!h.g.f,e'd,cba", result);
 
@@ -57,19 +56,19 @@ namespace CodingProblems.Tests
             string str = "a,b$c";
             Solutions s = new Solutions();
 
-            string result = s.ReverseArrayWithSpecialCharacters_ConstantSpace(str.ToCharArray());
+            string result = ReverseArrayWithSpecialCharacters.Solution_ConstantSpace(str.ToCharArray());
 
             Assert.AreEqual("c,b$a", result);
 
             str = "Ab,c,de!$";
 
-            result = s.ReverseArrayWithSpecialCharacters_ConstantSpace(str.ToCharArray());
+            result = ReverseArrayWithSpecialCharacters.Solution_ConstantSpace(str.ToCharArray());
 
             Assert.AreEqual("ed,c,bA!$", result); 
 
             str = "a!!!b.c.d,e'f,ghi";
 
-            result = s.ReverseArrayWithSpecialCharacters_ConstantSpace(str.ToCharArray());
+            result = ReverseArrayWithSpecialCharacters.Solution_ConstantSpace(str.ToCharArray());
 
             Assert.AreEqual("i!!!h.g.f,e'd,cba", result);
 
@@ -78,7 +77,6 @@ namespace CodingProblems.Tests
         [TestMethod]
         public void Test_GetAllPalindromicPartitions()
         {
-            Solutions s = new Solutions();
             //k a y a k
             //kaak
             //kayak
@@ -90,16 +88,14 @@ namespace CodingProblems.Tests
             //kk
             string str = "kayak";
 
-            List<string> results = s.GetAllPalindromicPartitions(str);
+            List<string> results = GetAllPalindromicPartitions.Solution(str);
 
-            Console.WriteLine(string.Join(",", results));
             Assert.AreEqual(13, results.Count);
 
             str = "geeks";
 
-            results = s.GetAllPalindromicPartitions(str);
+            results = GetAllPalindromicPartitions.Solution(str);
 
-            Console.WriteLine(string.Join(",", results));
             Assert.AreEqual(6, results.Count);
         }
 
@@ -107,14 +103,13 @@ namespace CodingProblems.Tests
         public void Test_GetTripletsLessThanSumCount()
         {
             int[] arr = { -2, 0, 1, 3 };
-            Solutions s = new Solutions();
 
-            int result = s.GetTripletsLessThanSumCount(arr, 2);
+            int result = GetTripletsLessThanSumCount.Solution(arr, 2);
             Assert.AreEqual(2, result);
 
             int[] arr2 = { 5, 1, 3, 4, 7}; 
 
-            result = s.GetTripletsLessThanSumCount(arr2, 12);
+            result = GetTripletsLessThanSumCount.Solution(arr2, 12);
             Assert.AreEqual(4, result);
 
         }
@@ -123,15 +118,14 @@ namespace CodingProblems.Tests
         public void Test_GetTripletsLessThanSumCount_Fast()
         {
             int[] arr = { -2, 0, 1, 3 };
-            Solutions s = new Solutions();
 
-            int result = s.GetTripletsLessThanSumCount_Faster(arr, 2);
+            int result = GetTripletsLessThanSumCount.Solution_Faster(arr, 2);
 
             Assert.AreEqual(2, result);
 
             int[] arr2 = { 5, 1, 3, 4, 7 };
 
-            result = s.GetTripletsLessThanSumCount_Faster(arr2, 12);
+            result = GetTripletsLessThanSumCount.Solution_Faster(arr2, 12);
             Assert.AreEqual(4, result);
         }
 
@@ -139,15 +133,14 @@ namespace CodingProblems.Tests
         public void Test_PythagoreanTriplet()
         {
             int[] arr = { 3, 1, 4, 6, 5 };
-            Solutions s = new Solutions();
 
-            bool result = s.HasPythagoreanTriplet(arr);
+            bool result = HasPythagoreanTriplet.Solution(arr);
 
             Assert.IsTrue(result);
 
             int[] arr2 = { 10, 4, 6, 12, 5 };
 
-           result = s.HasPythagoreanTriplet(arr2);
+           result = HasPythagoreanTriplet.Solution(arr2);
             Assert.IsFalse(result);
         }
 
@@ -155,15 +148,14 @@ namespace CodingProblems.Tests
         public void Test_PythagoreanTriplet_Fast()
         {
             int[] arr = { 3, 1, 4, 6, 5 };
-            Solutions s = new Solutions();
 
-            bool result = s.HasPythagoreanTriplet_Faster(arr);
+            bool result = HasPythagoreanTriplet.Solution_Faster(arr);
 
             Assert.IsTrue(result);
 
             int[] arr2 = { 10, 4, 6, 12, 5 };
 
-            result = s.HasPythagoreanTriplet_Faster(arr2);
+            result = HasPythagoreanTriplet.Solution_Faster(arr2);
             Assert.IsFalse(result);
         }
 
@@ -171,28 +163,27 @@ namespace CodingProblems.Tests
         public void Test_GetLengthOfLargestSubArrayWithContiguousElements()
         {
             int[] arr = { 10, 12, 11 };
-            Solutions s = new Solutions();
 
-            int result = s.GetLengthOfLargestSubArrayWithContiguousElements(arr);
+            int result = LengthOfLargestSubArrayWithContiguousElements.Solution(arr);
 
             Assert.AreEqual(3, result);
 
             int[] arr2 = { 14, 12, 11, 20};
 
-            result = s.GetLengthOfLargestSubArrayWithContiguousElements(arr2);
+            result = LengthOfLargestSubArrayWithContiguousElements.Solution(arr2);
             Assert.AreEqual(2, result);
 
             int[] arr3 = { 1, 56, 58, 57, 90, 92, 94, 93, 91, 45 };
 
-            result = s.GetLengthOfLargestSubArrayWithContiguousElements(arr3);
+            result = LengthOfLargestSubArrayWithContiguousElements.Solution(arr3);
             Assert.AreEqual(5, result);
 
             int[] arr4 = { 5, 10, 15, 20, 3, 1, 18 };
 
-            result = s.GetLengthOfLargestSubArrayWithContiguousElements(arr4);
+            result = LengthOfLargestSubArrayWithContiguousElements.Solution(arr4);
             Assert.AreEqual(0, result);
 
-            result = s.GetLengthOfLargestSubArrayWithContiguousElements(new int[0]);
+            result = LengthOfLargestSubArrayWithContiguousElements.Solution(new int[0]);
             Assert.AreEqual(0, result);
         }
 
@@ -201,12 +192,12 @@ namespace CodingProblems.Tests
         {
             int[] arr = { 4, 3, 7, 8, 6, 2, 1 };
             Solutions s = new Solutions();
-            s.ConvertToZigZag(arr);
+            ConvertToZigZag.Solution(arr);
             Console.WriteLine(String.Join(",", arr));
             zValidateZigZag(arr);
 
             int[] arr2 = { 1, 4, 3, 2 };
-            s.ConvertToZigZag(arr2);
+            ConvertToZigZag.Solution(arr2);
             Console.WriteLine(String.Join(",", arr2));
             zValidateZigZag(arr2);
         }
@@ -216,12 +207,12 @@ namespace CodingProblems.Tests
         {
             int[] arr = { 4, 3, 7, 8, 6, 2, 1 };
             Solutions s = new Solutions();
-            s.ConvertToZigZag_Faster(arr);
+            ConvertToZigZag.Solution_Faster(arr);
             Console.WriteLine(String.Join(",", arr));
             zValidateZigZag(arr);
 
             int[] arr2 = { 1, 4, 3, 2 };
-            s.ConvertToZigZag_Faster(arr2);
+            ConvertToZigZag.Solution_Faster(arr2);
             Console.WriteLine(String.Join(",", arr2));
             zValidateZigZag(arr2);
         }
@@ -250,11 +241,11 @@ namespace CodingProblems.Tests
         {
             Solutions s = new Solutions();
 
-            int result = s.ModularExponentiation(2, 3, 5);
+            int result = ModularExponentiation.Solution(2, 3, 5);
 
             Assert.AreEqual(3, result);
 
-            result = s.ModularExponentiation(2, 5, 13);
+            result = ModularExponentiation.Solution(2, 5, 13);
 
             Assert.AreEqual(6, result);
         }
@@ -264,11 +255,11 @@ namespace CodingProblems.Tests
         {
             Solutions s = new Solutions();
 
-            int result = s.ModularExponentiation_Bits(2, 3, 5);
+            int result = ModularExponentiation.SolutionWithBits(2, 3, 5);
 
             Assert.AreEqual(3, result);
 
-            result = s.ModularExponentiation_Bits(2, 5, 13);
+            result = ModularExponentiation.SolutionWithBits(2, 5, 13);
 
             Assert.AreEqual(6, result);
         }
@@ -277,11 +268,11 @@ namespace CodingProblems.Tests
         public void Test_Power()
         {
             Solutions s = new Solutions();
-            decimal result = s.Power(2, -2);
+            decimal result = ModularExponentiation.Power(2, -2);
 
             Assert.AreEqual(.25m, result);
 
-            result = s.Power(2, 3);
+            result = ModularExponentiation.Power(2, 3);
 
             Assert.AreEqual(8, result);
         }
@@ -291,9 +282,9 @@ namespace CodingProblems.Tests
         {
             Solutions s = new Solutions();
 
-            Assert.IsTrue(s.IsPrime(11));
-            Assert.IsFalse(s.IsPrime(15));
-            Assert.IsFalse(s.IsPrime(1));
+            Assert.IsTrue(IsPrime.Solution(11));
+            Assert.IsFalse(IsPrime.Solution(15));
+            Assert.IsFalse(IsPrime.Solution(1));
         }
 
         [TestMethod]
@@ -301,9 +292,9 @@ namespace CodingProblems.Tests
         {
             Solutions s = new Solutions();
 
-            Assert.IsTrue(s.IsPrime2(11));
-            Assert.IsFalse(s.IsPrime2(15));
-            Assert.IsFalse(s.IsPrime2(1));
+            Assert.IsTrue(IsPrime.Solution2(11));
+            Assert.IsFalse(IsPrime.Solution2(15));
+            Assert.IsFalse(IsPrime.Solution2(1));
         }
 
         [TestMethod]
@@ -311,8 +302,8 @@ namespace CodingProblems.Tests
         {
             Solutions s = new Solutions();
 
-            Assert.IsTrue(s.IsPrimeWithHighProbability(11, 3));
-            Assert.IsFalse(s.IsPrimeWithHighProbability(15, 3));
+            Assert.IsTrue(IsPrime.SolutionWithHighProbability(11, 3));
+            Assert.IsFalse(IsPrime.SolutionWithHighProbability(15, 3));
         }
 
         [TestMethod]
@@ -323,7 +314,7 @@ namespace CodingProblems.Tests
 
             for (int i = 0; i < nums.Length; i++)
             {
-                int result = s.EulersTotient(i + 1);
+                int result = EulersTotient.Solution(i + 1);
 
                 Assert.AreEqual(nums[i], result);
             }
@@ -337,7 +328,7 @@ namespace CodingProblems.Tests
 
             for (int i = 0; i < nums.Length; i++)
             {
-                int result = s.EulersTotientUsingEulersProduct(i + 1);
+                int result = EulersTotient.SolutionUsingEulersProduct(i + 1);
 
                 Assert.AreEqual(nums[i], result);
             }
